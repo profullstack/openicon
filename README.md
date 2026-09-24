@@ -16,22 +16,31 @@ sprite.svg             every icon as <symbol id="oi-<key>">
 index.html             the whole set on one page
 ```
 
-## Two styles
+## One drawing, five styles
 
-**Simple** is the line set above: monochrome, `currentColor`, the default and the canonical form of every icon.
+**Simple** is the line set above: monochrome, `currentColor`, the default and the canonical form of every icon. The other four are colour styles: the same drawing in a different material, never a different drawing.
 
-**HQ** is optional full colour, at the finish of the [OpenEmoji](https://logicsrc.com/openemoji) set:
+| Style | Material | Good for |
+|---|---|---|
+| `hq` | Glass and enamel under a warm key light, at the finish of the [OpenEmoji](https://logicsrc.com/openemoji) set | Sitting beside the emoji; anywhere the 2000s gloss is the point |
+| `agentic-matte` | Flat tonal planes with hard boundaries and one cool edge-light | The general-purpose colour style: holds at 20px on light and dark |
+| `agentic-machined` | Milled anodized aluminium, hairline chamfers, one anodized accent | Hardware and rack UIs, shown large |
+| `agentic-emissive` | Near-black body with the working part lit | Dark terminals; it disappears on a light ground |
+
+Every style lays its files out the same way, under its own directory (`hq/`, `styles/agentic-matte/`, …):
 
 ```
-hq/png/<size>/<key>.png    16 to 256 px, every icon
-hq/webp/<size>/<key>.webp  64 and 128 px
-hq/svg/<key>.svg           brands only: the logo in its owner's colour
-hq/style.txt               the art direction every HQ icon was drawn under
+<style>/png/<size>/<key>.png    16 to 256 px, every icon
+<style>/webp/<size>/<key>.webp  64 and 128 px
+<style>/svg/<key>.svg           brands only: the logo in its owner's colour
+<style>/style.txt               the art direction every icon in it was drawn under
 ```
 
-- **The 259 UI icons were drawn by `gpt-image-2`.** Each drawing started from the icon's own simple glyph, so the silhouette and meaning stay the same, and used OpenEmoji artwork (laptop, gem, light bulb) as the style reference. Colour is set per category, and meaning overrides it: green for add and check, red for delete and errors, gold for warnings and stars.
-- **The 111 brands were not drawn.** Each is its simple logo in the owner's published colour. The source of every colour is recorded in `hex_source`: a Simple Icons slug, or the brand's own guidelines page.
-- **In `openicon.json`,** every icon has an `hq` block alongside its simple fields, and the top-level `hq` block records the sizes and provenance.
+- **The 259 UI icons were drawn by `gpt-image-2`, once per style.** Each drawing starts from the icon's own simple glyph, so the silhouette and meaning stay the same. HQ also used OpenEmoji artwork (laptop, gem, light bulb) as a style reference; the agentic styles use none, because that reference is where the gloss comes from. Colour is set per category in every style, and meaning overrides it: green for add and check, red for delete and errors, gold for warnings and stars.
+- **The 111 brands were not drawn in any style.** Each is its simple logo in the owner's published colour. The source of every colour is recorded in `hex_source`: a Simple Icons slug, or the brand's own guidelines page.
+- **In `openicon.json`,** the top-level `styles` lists them and `style_info` describes each one; every icon carries a `styles` map keyed by the same ids. The first HQ release's `hq` blocks are still written, as the same objects under their older name.
+
+`agentic` on its own means `agentic-matte`.
 
 ## Use it
 
