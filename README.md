@@ -4,7 +4,7 @@
 
 - **259 drawn icons** on a 24x24 grid: 2px strokes, round caps and joins, 2 units of padding, `currentColor`. They cover actions, navigation, communication, media, files, status, time, commerce, developer tools, devices and the editor.
 - **111 brand logos**, from GitHub, X, Bluesky, Mastodon, Discord, Slack, Signal and WhatsApp to npm, Stripe and Bitcoin.
-- **Terminal glyphs for every icon.** `mail` is 󰇮 in a Nerd Font, ✉ in a plain UTF-8 terminal, and `@` anywhere else. [hqtui](https://hqtui.com) ships this set as its default icon pack.
+- **Terminal glyphs for every icon.** `mail` is 󰇰 in a Nerd Font, ✉ in a plain UTF-8 terminal, and `@` anywhere else. [hqtui](https://hqtui.com) ships this set as its default icon pack.
 
 ## What is here
 
@@ -28,7 +28,7 @@ The icons inherit `color` from the surrounding text. In a terminal, read `tui` f
 
 ```json
 { "key": "mail", "aliases": ["email", "envelope"],
-  "tui": { "nerd": "󰇮", "nerd_code": "f01ee", "nerd_name": "md-email_outline", "unicode": "✉", "ascii": "@" } }
+  "tui": { "nerd": "󰇰", "nerd_code": "f01f0", "nerd_name": "md-email_outline", "unicode": "✉", "ascii": "@" } }
 ```
 
 Use `nerd` when the terminal font is a Nerd Font, otherwise `unicode`, and fall back to `ascii`.
