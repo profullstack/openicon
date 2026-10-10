@@ -1,8 +1,8 @@
 # OpenIcon
 
-370 icons for interfaces and terminals, packed as an [OpenIcon](https://logicsrc.com/openicon) set. Each icon is an SVG, a set of PNGs, and three terminal glyphs (Nerd Font, Unicode, ASCII).
+372 icons for interfaces and terminals, packed as an [OpenIcon](https://logicsrc.com/openicon) set. Each icon is an SVG, a set of PNGs, and three terminal glyphs (Nerd Font, Unicode, ASCII).
 
-- **259 drawn icons** on a 24x24 grid: 2px strokes, round caps and joins, 2 units of padding, `currentColor`. They cover actions, navigation, communication, media, files, status, time, commerce, developer tools, devices and the editor.
+- **261 drawn icons** on a 24x24 grid: 2px strokes, round caps and joins, 2 units of padding, `currentColor`. They cover actions, navigation, communication, media, files, status, time, commerce, developer tools, devices and the editor.
 - **111 brand logos**, from GitHub, X, Bluesky, Mastodon, Discord, Slack, Signal and WhatsApp to npm, Stripe and Bitcoin.
 - **Terminal glyphs for every icon.** `mail` is 󰇰 in a Nerd Font, ✉ in a plain UTF-8 terminal, and `@` anywhere else. [hqtui](https://hqtui.com) ships this set as its default icon pack.
 
@@ -36,7 +36,7 @@ Every style lays its files out the same way, under its own directory (`hq/`, `st
 <style>/style.txt               the art direction every icon in it was drawn under
 ```
 
-- **The 259 UI icons were drawn by `gpt-image-2`, once per style.** Each drawing starts from the icon's own simple glyph, so the silhouette and meaning stay the same. HQ also used OpenEmoji artwork (laptop, gem, light bulb) as a style reference; the agentic styles use none, because that reference is where the gloss comes from. Colour is set per category in every style, and meaning overrides it: green for add and check, red for delete and errors, gold for warnings and stars.
+- **The UI icons were drawn by `gpt-image-2`, once per style** (`random` and `vote`, added later, by `gpt-image-2.5-flare`: `gpt-image-2` no longer takes a transparent background). Each drawing starts from the icon's own simple glyph, so the silhouette and meaning stay the same. HQ also used OpenEmoji artwork (laptop, gem, light bulb) as a style reference; the agentic styles use none, because that reference is where the gloss comes from. Colour is set per category in every style, and meaning overrides it: green for add and check, red for delete and errors, gold for warnings and stars.
 - **The 111 brands were not drawn in any style.** Each is its simple logo in the owner's published colour. The source of every colour is recorded in `hex_source`: a Simple Icons slug, or the brand's own guidelines page.
 - **In `openicon.json`,** the top-level `styles` lists them and `style_info` describes each one; every icon carries a `styles` map keyed by the same ids. The first HQ release's `hq` blocks are still written, as the same objects under their older name.
 
