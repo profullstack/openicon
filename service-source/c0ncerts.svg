@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="c0-icon-title c0-icon-desc" color="#0b1020">
+  <title id="c0-icon-title">c0ncerts.com</title>
+  <desc id="c0-icon-desc">An angular C wraps a three-bar live audio pulse.</desc>
+  <defs>
+    <linearGradient id="c0-icon-heat" x1="18" y1="22" x2="93" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7848"/>
+      <stop offset=".58" stop-color="#f59b48"/>
+      <stop offset="1" stop-color="#f0b949"/>
+    </linearGradient>
+  </defs>
+  <style>@media (prefers-color-scheme:dark){.c0-icon-pulse{fill:#3dd2c9}}</style>
+  <g transform="translate(4 4) scale(1)">
+    <path fill="url(#c0-icon-heat)" d="M96 24 78 6H40L6 40V80L40 114H78L96 96 80 80 68 92H49L28 71V49L49 28H68L80 40Z"/>
+    <g class="c0-icon-pulse" fill="#168c87">
+      <rect x="60" y="51" width="10" height="18" rx="1.5"/>
+      <rect x="78" y="44" width="10" height="32" rx="1.5"/>
+      <rect x="96" y="51" width="10" height="18" rx="1.5"/>
+    </g>
+  </g>
+</svg>
